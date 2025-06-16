@@ -13,3 +13,6 @@ vim.g.maplocalleader = ","
 vim.opt.numberwidth = 3
 vim.opt.signcolumn = "yes:1"
 vim.opt.statuscolumn = "%l%s"
+
+vim.g.termguicolors = true
+vim.g.syntax = on

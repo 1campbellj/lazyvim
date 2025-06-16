@@ -1,14 +1,10 @@
 return {
-  -- add gruvbox
-  { 
-    "tanvirtin/monokai.nvim",
-  },
-
-  -- Configure LazyVim to load gruvbox
   {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "monokai",
-    },
-  }
+    "tanvirtin/monokai.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd("colorscheme monokai_pro")
+    end,
+  },
 }
