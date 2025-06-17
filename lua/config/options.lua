@@ -16,3 +16,9 @@ vim.opt.statuscolumn = "%l%s"
 
 vim.g.termguicolors = true
 vim.g.syntax = on
+
+vim.opt.wrap = true
+vim.opt.linebreak = true        -- Don't break words when wrapping
+vim.opt.breakindent = true      -- Maintain indentation for wrapped lines
+vim.opt.showbreak = "↪ "        -- Visual indicator for wrapped lines
+vim.opt.breakindentopt = "shift:2"  -- Add extra indent to wrapped lines
