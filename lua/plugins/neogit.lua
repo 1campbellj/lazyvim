@@ -8,4 +8,19 @@ return {
     "nvim-telescope/telescope.nvim", -- optional
     "folke/snacks.nvim",             -- optional
   },
+  config = function()
+  local neogit = require('neogit')
+  neogit.setup({
+    mappings = {
+      status = {
+        ["="] = "Toggle",  -- Use = to toggle files
+      }
+    }
+  })
+  
+  -- Create :Git command
+  vim.api.nvim_create_user_command('Git', function()
+    neogit.open()
+  end, {})
+end
 }
